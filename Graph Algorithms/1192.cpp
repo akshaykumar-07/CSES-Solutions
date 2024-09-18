@@ -28,10 +28,6 @@ int main(){
     // cin>>t;
  
  
-    // check_prime() ;
-    // find_divisors() ;
-    // find_fact() ;
- 
     while(t--){
         ak();
         cout<<endl;
@@ -56,7 +52,6 @@ void dfs (int i, int j, vector<vvl> &g) {
 void ak(){
     ll n;
     cin>>n ;
- 
     ll m ;
     cin>>m ;
  
@@ -81,5 +76,4 @@ void ak(){
     }
  
     cout<<ans ;
- 
 }
