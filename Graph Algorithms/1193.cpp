@@ -57,7 +57,7 @@ void ak(){
     }
 
 
-    vector<vector<pair<ll, ll>>> prev (n, vector<pair<ll,ll>> (m, {-1, -1})) ;
+    vector<vector<pair<ll, ll>>> par (n, vector<pair<ll,ll>> (m, {-1, -1})) ;
     vector<vvl> vis(n, vvl(m, 0)) ;
     vis[ini.first][ini.second] = 1 ;
 
@@ -75,7 +75,7 @@ void ak(){
             if (x2<0 || y2<0 || x2>=n || y2>=m) continue ;
 
             if (!vis[x2][y2] && grid[x2][y2]!='#') {
-                prev[x2][y2] = {x, y} ;
+                par[x2][y2] = {x, y} ;
                 vis[x2][y2] = 1 ;
                 q.push({x2, y2}) ;
             }
@@ -92,7 +92,7 @@ void ak(){
     auto curr = end ;
     while (1) {
         path.pb(curr) ;
-        curr = prev[curr.first][curr.second] ;
+        curr = par[curr.first][curr.second] ;
         if (curr == ini)    break ;
     }
 
